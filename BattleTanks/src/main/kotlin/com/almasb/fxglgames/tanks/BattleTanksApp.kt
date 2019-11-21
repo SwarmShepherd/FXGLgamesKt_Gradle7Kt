@@ -37,6 +37,9 @@ import com.almasb.fxgl.physics.HitBox
 import javafx.geometry.Point2D
 import javafx.scene.input.KeyCode
 
+
+//class MyUserAction : UserAction("walking")
+
 /**
  * @author Almas Baimagambetov (AlmasB) (almaslvl@gmail.com)
  */
@@ -50,35 +53,42 @@ class BattleTanksApp : GameApplication() {
         settings.height  = 840
     }
 
+
     override fun initInput() {
-        val input = FXGL.getInput()
 
-        input.addAction(object : UserAction("Move Left") {
+        //------------------------------------------------------
+        //GKNOTE: .left() functionally identical to the the other keys,
+        // broken down here for testing/instructional purposes only...
+        class MoveLeft : UserAction("Move Left"){
             override fun onAction() {playerComponent!!.left()}
-        }, KeyCode.A)
+        }
 
-        input.addAction(object : UserAction("Move Right") {
+        FXGL.getInput().addAction(
+                MoveLeft(),
+                KeyCode.A
+        )
+        //--------------------------------------------------------
+
+        FXGL.getInput().addAction(object : UserAction("Move Right") {
             override fun onAction() {playerComponent!!.right()  }
         }, KeyCode.D)
 
-        input.addAction(object : UserAction("Move Up") {
+        FXGL.getInput().addAction(object : UserAction("Move Up") {
             override fun onAction() { playerComponent!!.up()}
         }, KeyCode.W)
 
-        input.addAction(object : UserAction("Move Down") {
+        FXGL.getInput().addAction(object : UserAction("Move Down") {
             override fun onAction() {playerComponent!!.down()}
         }, KeyCode.S)
 
-        input.addAction(object : UserAction("Shoot") {
+        FXGL.getInput().addAction(object : UserAction("Shoot") {
             override fun onActionBegin() {playerComponent!!.shoot()}
         }, KeyCode.F)
-
     }
 
+
     override fun initGame() {
-
         FXGL.getGameWorld().addEntityFactory(BattleTanksFactory())
-
 
         val level = FXGL.getAssetLoader().loadLevel("level0.txt", TextLevelLoader(84, 84, '0'))
         FXGL.getGameWorld().setLevel(level)
