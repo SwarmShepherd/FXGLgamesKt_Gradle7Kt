@@ -1,0 +1,174 @@
+                                                 ChangeMan:  Level One
+
+INTRODUCTION:
+    This project is about building an INTERACTIVE LEARNING ENVIRONMENT (ILE) for very young children (under 3?).  
+
+    Level 1 will be about teaching a basic Noun Vocabulary (of perhaps 50 Symbols).***     
+
+    Children of this age cannot read, so menu choices, or scores are only for a child's parent/teacher
+    if that.
+    
+    Also, as a future consideration Input devices such as Keyboards will clearly not be feasible.  Touch screens seem to make the most sense, of
+    the generally available input devices.  (I think of my wife's classroom touch board which is about 4' by 6' for a group version of this
+    game.)
+
+    There is no need or desire to consider Cellphones.  Perhaps large screen tablets?
+
+    I expect that developing on and for a desktop will be the easiest / most effective approach, however, please keep in mind
+    the eventually the Environment should be able to be Run as a Client in Modern Browsers.  In no way do I wish to see the game
+    quality comprimised to fit low-end or older machines or computers without 'reasonable' memory.  
+
+    The Environment should not be a test of reflexes, or require agility or speed, it is much more about making simple logical choices, 
+    associating and eventually recognizing abstract symbols to represent concrete instances.  Level 1 will concentrate on everyday things
+    likely in a child's environment such as Dog, Cat, Chair, Bed...  
+
+    [THIS IS IMPORTANT TO UNDERSTAND, AND COULD POINT TO DOING THESE TESTS FIRST RATHER THAN AFTER A STARTER BOARD / ROOMS ILE.
+    "Morphs" from the Symbol to an actual Image, I suspect will be a Super Associative Learning Tool" and I expect will fascinate
+    children.  Therefore the name of the game.  However, doing even a single Morph will probably take considerable detailed work and time.  
+    We will NOT try to even demonstrate this in the first versions and can pick just One to do experiment with resource factors in a 
+    stand-alone test program.   As a somewhat effective PLACEHOLDER I visualize just "flipping through" with some fade in / fade out to 
+    hold the place for carefully constructed morphs.   I believe the morphs must be done manually, but perhaps there is software capable of
+    generating and capturing morph stages.  
+
+    In eventual implementation the Client (running in a browser) must communicate every situation presented and every move / choice made 
+    by a child. This will be for adjusting the number of choices, the difficulty of choices, as well as such uses as preventing successfully 
+    learned material to be re-presented to the child.  We can also measure progress, and compare alternative alternative presentations of materials.
+
+    [If it is of interest to you I will be happy to allow 'the first level' of the game to be public.  However, the game facing the public 
+    must not use Bliss Symbols.  I have some thoughts about the same matching technique working for the same images but the test would be to 
+    select an object that does not belong to a class of objects.  So a Dinasaour in a room full of small mamals would be the Object to select.
+    This would be "close enough" to the actual to share 95% of the code DNA, and be at least a good learning example?]
+
+    Below I shall go from memory to provide some of the Logic and Experience behind this project, absolutely not needed for game design
+    /implementation!  ****
+
+
+
+
+
+BOARD - see this image: *
+	- PATH
+
+                STEPS
+
+			Two lines to common to ajoining STEPS, two Curves allowing the Paths to wind between BUILDINGS (A typical 
+                        Board Game)
+
+
+	- BUILDING
+
+		-ROOM(S) x  1  (2, 3, 4?)
+
+			- Consider a class to contain all information about a ROOM
+
+			-  [ADVANCED] Adjust number of choices to the HEALTH of the player
+
+
+			- CHOICE_OBJECT x (4, 5, 6?)
+				Display "Statue" or Image of an Object
+				Somewhere ON (or nearest) to Object display (Bliss) SYMBOL 
+
+
+			_ CHOICE_SET
+				Generally related Objects - e.g.  Large Mammals, pieces of furniture found in a typical house
+
+
+
+PLAYER
+
+	- Player MOVES along path and into Buildings to reveal ROOMS containing CHOICE_OBJECTS
+
+	- Player "Morphs" * from one CHOICE_OBJECT (Instance) to the Next Stopping "Randomly" on one CHOICE_OBJECT Instance**
+
+        - At same time the CHOICE_OBJECTS (all) "morph" from Things to a "Cartoche" (rounded Rectangle) enclosing the SYMBOL
+
+	THEREFORE as things "settle out" after the PLAYER ENTERS ROOM:  
+
+		The Player is an Image / Statue (Instance) of some OBJECT  
+
+		The Room consists of Cartouche Shapes enclosing Symbols
+
+		One SYMBOL will MATCH the PLAYER (generally)
+
+		To gain Maximum Strength the PLAYER must move to the Correct Symbol. 
+
+
+		IF THE CHOICE IS CORRECT....
+
+		     The Player is repositioned back to where he entered the room(?)
+
+		     The (Correctly Choosen) OBJECT is made .50 transparent or otherwise "Marked" or Removed from the room
+
+                     The Player Once again goes into Morphing Mode and settles out to one of the REMAINING SYMBOLS   
+
+		     Music reflecting the "happy / successful / building" situation
+
+
+		IF THE CHOICE IS INCORRECT... 
+
+	             The player looses "Health"(points)
+
+		     The SYMBOL Morps back slowly to the (original) OBJECT (memory AID)  (More wrong choices -> Slower)
+
+		     Music reflecting the "sad / dangerous / not fun" situation
+
+	WHEN ALL SYMBOLS have been correctly MATCHED the BUILDING is Greyed, X'd out, or otherwise Designated as Lesson Learned.
+
+
+        The PLAYER is repositioned to the path "STEP" just before the Door and can proceed to another BUILDING
+
+
+
+
+	- can move only Forward/Backward along any PATH   OR  Enter a BUILDING
+        
+	- Gains HEALTH => Size / Opacity with CHOICE_CORRECT
+
+        - Lose HEALTH =>  Size / Opacity with !CHOICE_CORRECT
+
+	- Can Accumulate HEALTH by Finish Choosing All Objects Correctly
+
+	
+
+	
+NOTES;
+
+
+Will (eventually) Morph smoothly (?) from one choice object to next imparting (associative) information.  However, to get started it can be
+more like the SlotMachine game - where each image is just shown in End_Form (perhaps "spinning"?) for each Object/Symbol in a room [4-5-6]
+eventually landing on one.  
+
+
+
+* example board here:
+https://www.123rf.com/photo_58794587_stock-vector-board-game-with-a-block-path-on-a-green-park-with-happy-people-and-cartoon-wooden-sign-boards.html
+more boards here: 
+https://www.123rf.com/photo_58794587_stock-vector-board-game-with-a-block-path-on-a-green-park-with-happy-people-and-cartoon-wooden-sign-boards.html
+
+**  The SYMBOL MAY BE FOR "BIRDS" AS A CLASS like /\./\ (Abstraction of two wings), BUT THE IMAGE MIGHT WELL BE OF A Crow from another view. 
+
+***
+Level 2 seems likely to be most logically about learning basic verbs.  
+Level 3 might begin to construct simple sentences to describe what is happening in a 'Scene' (Boy and Dog RUNNING).  
+As Bliss is a "Constructed" language there is a logical relationship [usually] present such word pairs as 
+[Hot, Cold], [Big, Small], [Hard, Simple] and so on.  This might be a unique level, or mixed into levels that mix
+various word types.  I am thinking NOUNS are a essential level, the easiest to represent, and therefore logical for the
+first lvel.
+ 
+
+
+**** Misc Notes related to Bliss, natural language and so on....
+   1. There are some 2000 unique Symbols in the Bliss System.  Symbols often consist of multiple subsymbols and modifiers.  Logically a Forest is a tree and the multiply symbol twice as a modifier.  A car is a Cart + plus the symbol for mechanized, A bird plus this same modifier is an Airplane - its all child like simple and logical. 
+
+   2. Bliss Symbols have been put into tables for some 10 natural languages.  Therefore a simple Symbolic sentence can be output in a straight foreward way in German, Hebrew, Italian, Icelantic, and so on. New words are added every year, there are some online tools now that are useful and good for adult oriented learning (not so much for children imo).
+
+   3. Expenditures of time and mental energy to learn any language is significant as an adult, as a child it is an exciting revealing world that will largely occupy the child's mind for years.  
+
+
+2. Spelling is a tricky (and life long) turture.  Think about what spelling is!  Its symbols that generally map to sounds that have been mapped to things and actions etc.  Many things have to function, hearing, sight, memory to begin to read and write.  Bliss Symbolics skip many of these steps, and thus have been PROVEN to be effective as a "Bridge Language" where children that have somehow not been able to communicate even with their family suddenly can start pointing to symbols to build many 100's of useful sentences!  
+
+     
+
+
+	
+

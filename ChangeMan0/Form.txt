@@ -1,0 +1,12 @@
+
+Project type: New
+Language:     Kotlin
+Technology:   FXGL
+Build tool:   Gradle with Kotlin DSL*  See this folder: build.gradle.kts
+
+
+
+
+*See my base that has been working for me, no changes necessary from project to project, and modify as wished.
+ ....IF any kind of problem just use Maven, or your Gradle with Groovy DSL
+

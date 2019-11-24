@@ -1,0 +1,13 @@
+Hallo Almas,
+
+I'm not sure what is reasonable in three hours, but any running start on a Boardgame would be super!
+
+Gradle with Kotlin DSL is not a priority - use Graven if you are not interested / or is taking time!
+
+I am unaware of any boardgame in your set of games so I think you may like to rough out such a game where PLAYER moves along a path forward / backwards, 
+with PLAYER choice to Enter Any BUILDING (>=1 ROOM).
+
+Don't let me mess with your time allocation, but if it takes more time 1st month, and you can subtract from 2nd / 3rd months, or perhaps skip month
+#1 and take more time next month(s)... whatever works for you!
+
+One Note: Anything left public on GitHub cannot use Bliss Symbols, otherwise I think the first level of the boardgame can be left public.

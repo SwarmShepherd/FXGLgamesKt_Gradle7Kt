@@ -1,0 +1,26 @@
+
+
+There is a image morphing "package" for Icons written in JS, 
+
+	repo here: https://github.com/alexk111/SVG-Morpheus/tree/master/source/js
+
+	see demo here:  http://alexk111.github.io/SVG-Morpheus/    (cute, end to end with rotation params)
+
+
+=========================
+
+	Can images be handled as EPS, or any vector format? Or best support for such as PNG? (Will be needing to deal with many different images and will want to adjust size without pixelation issues. Hope to use in many "morphs".)
+
+	George Koller @SwarmShepherd 05:43
+	Any plan /desire to support morphing directly? (Have found a JS repo for nice transitions of SVG icons here: https://github.com/alexk111/SVG-Morpheus with online demo here: http://alexk111.github.io/SVG-Morpheus/
+
+	George Koller @SwarmShepherd 05:48
+	Perhaps building sprite sheets covers this with lower run-time resources.
+
+==================================
+
+BUILD SPRITE SHEETS FROM IMAGE FILES:   TexturePacker  
+     site: https://www.codeandweb.com/store/texturepacker-single
+
+
+

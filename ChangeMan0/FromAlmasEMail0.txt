@@ -1,0 +1,21 @@
+Hi George,
+
+Please see below:
+
+
+Thank you very much for the GitHub sponsorship!
+
+As part of the chosen tier, I will work for 3 hours a month on a given project. Please provide a concise refined spec / requirements of the project by completing the following, deleting what is not needed:
+
+Project type: new / existing
+Language: Java / Kotlin
+Technology: pure JavaFX / FXGL
+Build tool: Maven / Gradle
+GitHub link to project (please add user AlmasB as collaborator for faster development):
+
+Requirements: (list the requirements here)
+
+
+Your first allocated monthly interval is Nov 23rd - Dec 23rd. My next available dates are: Nov 30th and Dec 1st. It is expected that I will develop on these dates. Please let me know if these dates are suitable for you.
+
+Kind regards, Almas
